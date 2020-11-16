@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import argparse
 
 def ctof(at :float) ->float:

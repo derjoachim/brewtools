@@ -24,10 +24,10 @@ Normally, gravity measuring tools are calibrated against a certain temperature. 
 
 #### Options / parameters
 
-`-h`: display a helpful message
-`-t`: measured temperature
-`-m`: measured gravity
-`-c`: override the calibration temperature. The default is 20 degrees celsius
+* `-h`: display a helpful message
+* `-t`: measured temperature
+* `-m`: measured gravity
+* `-c`: override the calibration temperature. The default is 20 degrees celsius
 
 ## `abv`
 
@@ -39,9 +39,9 @@ Simple ABV calculator, shamelessly borrowed from https://www.brewersfriend.com/2
 
 #### Options / parameters
 
-`-h`: display a helpful message
-`<OG>`: Original Gravity. See below for details
-`<FG>`: Final Gravity. See below for details
+* `-h`: display a helpful message
+* `<OG>`: Original Gravity. See below for details
+* `<FG>`: Final Gravity. See below for details
 
 #### Notes
 
