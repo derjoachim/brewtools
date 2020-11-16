@@ -31,4 +31,4 @@ parser.add_argument("OG", help="The Original Gravity value", type=validGravity)
 parser.add_argument("FG", help="The Final Gravity value", type=validGravity)
 
 args = parser.parse_args()
-print("Calculated ABV: %2.2f " % (calc(args.OG, args.FG)))
+print("Calculated ABV: %2.2f%s" % (calc(args.OG, args.FG), "%"))
