@@ -126,14 +126,15 @@ def getMashingScheme(recipe) -> str:
 def getHops(recipe) -> str:
     """ Generate a table with hop scheme """
     output = "## Hopgiftschema" + EOL + EOL
-    output += setTableHeaders(["Naam", "Hoeveelheid", "Kookijd", "Vorm", "Alfazuur %", "Betazuur %", "IBU %"])
+    output += setTableHeaders(["Naam", "Hoeveelheid", "Kookijd", "Vorm", "Alfazuur %", "Betazuur %", "IBU %", "Gebruik"])
     for hop in recipe.findall("./HOPS/HOP"):
         output += "| " + hop.findtext("NAME") + " | " 
         output += hop.findtext("DISPLAY_AMOUNT", str(( 1000 * float(hop.findtext("AMOUNT",0))))) + " | "
-        output += hop.findtext("DISPLAY_TIME", hop.findtext("TIME",0)) + " | "
+        output += hop.findtext("DISPLAY_TIME", hop.findtext("TIME","n.v.t.")) + " | "
         output += hop.findtext("FORM", "") + " | "
         output += str(round(float(hop.findtext("ALPHA",0)),1)) + " | "
-        output += str(round(float(hop.findtext("BETA",0)),1)) + " | |" + EOL
+        output += str(round(float(hop.findtext("BETA",0)),1)) + " | | "
+        output += hop.findtext("USE", "n.v.t.") + " | " + EOL
 
     return output + EOL + EOL
 
